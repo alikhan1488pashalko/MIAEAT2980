@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Service Kiosk</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="kiosk" id="kiosk">
+        <header>
+            <h1>miaeat</h1>
+        </header>
+        <main>
+            <div class="menu">
+                <h2>Menu</h2>
+                <div class="item" onclick="addToCart('Бургер', 920)">
+                    <img src="burger.jpg" alt="Бургер">
+                    <p>Бургер - 920₸</p>
+                </div>
+                <div class="item" onclick="addToCart('Картошка Фри', 682)">
+                    <img src="fries.jpg" alt="Fries">
+                    <p>Картошка Фри - 682₸</p>
+                </div>
+                <div class="item" onclick="addToCart('Soda', 574)">
+                    <img src="fanta.jpg" alt="Fanta">
+                    <p>Fanta - 574₸</p>
+                </div>
+                <div class="item" onclick="addToCart('Coca Cola', 574)">
+                    <img src="сola.jpg" alt="Coca Cola">
+                    <p>Coca Cola - 574₸</p>
+                </div>
+            </div>
+            <div class="cart">
+                <h2>Что вы заказали :</h2>
+                <ul id="cart-items"></ul>
+                <p id="total">Total: 0₸</p>
+                <button onclick="checkout()">Checkout</button>
+            </div>
+        </main>
+    </div>
+    <button id="fullscreenButton" onclick="enterFullscreen()">Enter Fullscreen</button>
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Enter Password</h2>
+            <input type="password" id="passwordInput" placeholder="Enter password">
+            <button onclick="checkPassword()">Submit</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
